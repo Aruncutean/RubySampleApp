@@ -1,10 +1,21 @@
-<% provide(:title, "Page Title") %>
 <!DOCTYPE html>
 <html>
+
 <head>
-<title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+    <title>
+        <%= full_title(yield(:title)) %>
+    </title>
+    <meta charset="utf-8">
+    <%= render 'layouts/rails_default' %>
+        <%= render 'layouts/shim' %>
 </head>
+
 <body>
-Contents
+    <%= render 'layouts/header' %>
+        <div class="container">
+            <%= yield %>
+                <%= render 'layouts/footer' %>
+        </div>
 </body>
+
 </html>
