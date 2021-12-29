@@ -129,5 +129,6 @@ Rails.application.configure do
   :password => ENV['parola@1A12'],
   :domain => 'heroku.com',
   :enable_starttls_auto => true
+  
   }
 end
