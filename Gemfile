@@ -3,12 +3,20 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.3'
 gem 'bcrypt', '3.1.13'
+gem 'faker'
+gem 'will_paginate', '~> 3.3'
+gem 'bootstrap-will_paginate', '1.0.0'
 gem 'bootstrap-sass', '3.4.1'
 
+gem 'htmlbeautifier'
+gem 'rufo'
+
+
+gem 'rails-controller-testing'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -41,6 +49,7 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
+gem 'sqlite3', '~> 1.4'
 end
 
 group :test do
@@ -49,6 +58,10 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+end
+
+group :production do
+gem 'pg', '1.1.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
