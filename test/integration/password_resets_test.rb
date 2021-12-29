@@ -73,5 +73,6 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
     assert_response :redirect
     follow_redirect!
     #assert_match '[1-9]\d microposts/', response.body
+    
     end
 end
