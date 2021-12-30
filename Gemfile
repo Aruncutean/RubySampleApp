@@ -2,8 +2,18 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.3'
+
+
+
+gem 'image_processing', '1.9.3'
+gem 'mini_magick', '>= 4.9.5'
+gem 'active_storage_validations'
+
 gem 'bcrypt', '3.1.13'
-gem 'faker'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git'
+
+
+
 gem 'will_paginate', '~> 3.3'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'bootstrap-sass', '3.4.1'
@@ -62,6 +72,7 @@ end
 
 group :production do
 gem 'pg', '1.1.4'
+gem 'aws-sdk-s3', '1.46.0', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
